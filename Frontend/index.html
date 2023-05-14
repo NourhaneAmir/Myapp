@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Person Registration form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <script src="script.js"></script>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="input-box" style="padding-top: 40px;">
+      <select id="method" onchange="getmethod();">
+        <option>---SELECT---</option>
+        <option id="GET">Get_all</option>
+        <option id="GETBYID">Get_by_ID</option>
+        <option id="POST">Post_new</option>
+        <option id="UPDATE">Update_by_ID</option>
+        <option id="DELETE">Delete_by_ID</option>
+      </select>
+    </div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details" id="data">
+          
+          <div class="input-box" id="namef">
+            <span class="details">Full Name</span>
+            <input type="text" id="name" placeholder="Enter your name" >
+          </div>
+          <div class="input-box" id="agef">
+            <span class="details">Age</span>
+            <input type="text" id="age" placeholder="Enter your Age" >
+          </div>
+          <div class="input-box" id="emailf">
+            <span class="details">Email</span>
+            <input type="text" id="email" placeholder="Enter your email" >
+          </div>
+          <div class="input-box" id="idf">
+            <span class="details">ID</span>
+            <input type="text" id="id" placeholder="Enter your ID" >
+          </div>
+        </div>
+        <div class="gender-details" id="gender">
+          <input type="radio" name="gender" id="dot-1" value="Male">
+          <input type="radio" name="gender" id="dot-2" value="Female">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" id="send" value="Register" onclick="submits()">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="container" style="margin-left: 40px; height: 300px;">
+    <table id="personTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+  </div>
+</body>
+</html>
